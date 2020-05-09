@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% include '/ressources/_style.html.twig' %}
+        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+        {% block stylesheets %}{% endblock %}
+        <script defer type="text/javascript" src="{{ asset('build/app.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+    </head>
+    <body class="bg-light">
+        {% block body %}{% endblock %}
+    </body>
+</html>

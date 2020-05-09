@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="sidebar">
+        {% include '/menu.html.twig' %}
+    </div>
+    <div class="content">
+        <div class="d-flex justify-content-center">
+            <span class="hp-title">Memory</span>
+        </div>
+        <div class="d-flex justify-content-center">
+            Nombre de cartes: <span class="nbCarte">{{ partie.nbCarte }}</span>
+        </div>
+        <div id="{{ partie.id }}" class="partie">
+            {% set i = 0 %}
+            {% for plateauCarte in partie.plateau.plateauCarte  %}
+                {% if i == 0 or i is divisible by(6) %}
+                    <div class="card-grid">
+                {% endif %}
+                <div class="card-image" id="{{ plateauCarte.id }}">
+                    {% if plateauCarte.statut.name == "Dos" %}
+                        <img src="/build/images/dos.png" alt="" class="img-fluid">
+                    {% else %}
+                        <img src="/build/images/{{ plateauCarte.carte.fichier }}" alt="" class="img-fluid">
+                    {% endif %}
+                </div>
+                {% set i = i + 1 %}
+                {% if i is divisible by(6) %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="FinishModal" class="Pmodal-container dp-none">
+        <div class="Pmodal">
+            <div class="box">
+                <div class="box-body">
+                    <div class="box-title">
+                        <div class="box-title-text">
+                            Partie terminée
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <a href="{{ path('newGame') }}" class="button" >Nouvelle partie</a>  <a href="{{ path('home', {id: partie.id}) }}" class="button" >Accueil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

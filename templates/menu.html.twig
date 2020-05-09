@@ -1,0 +1,32 @@
+<div class="sidebar-top">
+    <div class="sidebar-image">
+        <img src="/build/images/avatar2.png" alt="">
+    </div>
+    <div class="sidebar-user">
+        {{ app.user.username }}
+    </div>
+</div>
+<div class="sidebar-score">
+    <ul>
+        <li>Victoire: {{ app.user.nbVictoire }}</li>
+        <li>Nombre de parties: {{ app.user.nbPartie }}</li>
+    </ul>
+</div>
+<div class="sidebar-nav">
+    <a href="{{ path('home') }}" class="sidebar-row">
+                <span class="siderbar-row-icon">
+                    <i class="fas fa-home"></i>
+                </span>
+        <span class="sidebar-row-text">
+                    Accueil
+                </span>
+    </a>
+    <a href="{{ path('app_logout') }}" class="sidebar-row">
+                <span class="siderbar-row-icon">
+                    <i class="far fa-user"></i>
+                </span>
+        <span class="sidebar-row-text">
+                    Se deconnecter
+                </span>
+    </a>
+</div>
