@@ -4,6 +4,10 @@
 
 {% block body %}
 <div class="container">
+    {% if error is defined %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+
     <h1 class="Harry">Inscription</h1>
 
     {{ form_start(registrationForm) }}
