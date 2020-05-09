@@ -90,6 +90,7 @@ body {
     padding: 15px;
     align-self: center;
     cursor:pointer;
+    height:100%;
 }
 .card-grid .card-image:hover{
     padding: 5px;
@@ -97,6 +98,7 @@ body {
 .card-grid .card-image img {
     box-shadow: 4px 4px #dadbdc;
     border-radius: 10px;
+    height:100%;
 }
 
 .table-menu{
