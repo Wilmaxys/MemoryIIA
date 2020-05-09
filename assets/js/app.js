@@ -22,18 +22,6 @@ $( document ).ready(function () {
     let currentCardId = null;
     let currentNbCard = 0;
 
-    $('#TabPartie').DataTable( {
-        "lengthChange": false,
-        "language": {
-            "lengthMenu": "Afficher _MENU_ enregistrements par page",
-            "search": "Rechercher :",
-            "zeroRecords": "Aucun enregistrement trouvé.",
-            "info": "Page _PAGE_ sur _PAGES_",
-            "infoEmpty": "Aucun enregistrement disponible.",
-            "infoFiltered": "(Filtré à partir de _MAX_ enregistrements)"
-        }
-    } );
-
     $(document).on('click', '.card-image', function(){
         let that = $(this);
         $.ajax({
