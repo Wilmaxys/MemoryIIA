@@ -9,7 +9,7 @@
             <span class="hp-title">Memory</span>
         </div>
         <div class="table-menu">
-            <a href="{{ path('newGame') }}" class="button">Nouvelle partie</a>
+            <div id="newGame" class="button">Nouvelle partie</div>
         </div>
         <table id="TabPartie" class="table-template">
             <thead>
@@ -17,6 +17,7 @@
                 <th>Id</th>
                 <th>Date de création</th>
                 <th>Statut</th>
+                <th>Nombre de carte</th>
                 <th class="text-align-right">Actions</th>
             </tr>
             </thead>
@@ -31,6 +32,9 @@
                         {% else %}
                             En cours
                         {% endif %}
+                    </td>
+                    <td>
+                        {{ partie.NbCarte }}
                     </td>
                     <td class="text-align-right"><a href="{{ path('game', {id: partie.id}) }}" class="button" >Ouvrir</a>  <a href="{{ path('removeGame', {id: partie.id}) }}" class="button" >Supprimer</a></td>
                 </tr>

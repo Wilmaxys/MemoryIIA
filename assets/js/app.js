@@ -22,6 +22,21 @@ $( document ).ready(function () {
     let currentCardId = null;
     let currentNbCard = 0;
 
+    $(document).on('click', '#newGame', function(){
+        $.ajax({
+            url: '/selectDifficulty',
+            type: "GET",
+            dataType: "json",
+            async: true,
+            success: function (data) {
+                $('body').append(data);
+            },
+            error: function (errorThrown) {
+                console.log("error");
+            }
+        });
+    });
+
     $(document).on('click', '.card-image', function(){
         if($(this).children('img').attr('src') == "/build/images/dos.png")
         {

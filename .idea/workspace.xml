@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36981a55-b492-49fe-8f3a-aea43d036dca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/game/_selectDifficulty.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/GameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GameController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/PlateauCarte.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PlateauCarte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/game/game.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/game/game.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +193,8 @@
       <workItem from="1588679779580" duration="3890000" />
       <workItem from="1588850404751" duration="10817000" />
       <workItem from="1588951092872" duration="14305000" />
-      <workItem from="1589036880008" duration="2748000" />
+      <workItem from="1589036880008" duration="3022000" />
+      <workItem from="1589113139081" duration="4307000" />
     </task>
     <servers />
   </component>
@@ -204,6 +210,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1588951385961" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1589116004789">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1589116004789" />
     <state x="378" y="207" width="683" height="486" key="find.popup" timestamp="1586784465925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

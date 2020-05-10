@@ -48,8 +48,8 @@ class GameController extends AbstractController
     }
 
     /**
-     * @Route("/game/{id}", name="game")
-     */
+ * @Route("/game/{id}", name="game")
+ */
     public function index(Request $request, int $id): Response
     {
         $partie = $this->partieRepository->find($id);
@@ -66,9 +66,18 @@ class GameController extends AbstractController
     }
 
     /**
-     * @Route("/newGame", name="newGame")
+     * @Route("/selectDifficulty", name="selectDifficulty")
      */
-    public function new(Request $request): Response
+    public function selectDifficulty(Request $request): Response
+    {
+        $response = $this->render('game/_selectDifficulty.html.twig');
+        return new JsonResponse($response->getContent());
+    }
+
+    /**
+     * @Route("/newGame/{diff}", name="newGame")
+     */
+    public function new(Request $request, int $diff): Response
     {
         $manager = $this->manager;
         $user = $this->security->getUser();
@@ -84,12 +93,12 @@ class GameController extends AbstractController
 
         $partie->setFini(false);
         $partie->setPlateau($plateau);
-        $partie->setNbCarte(8);
+        $partie->setNbCarte($diff);
 
         $qb = $manager->createQueryBuilder();
         $qb->select('u')
             ->from('App\Entity\Carte', 'u')
-            ->setMaxResults(8);
+            ->setMaxResults($diff);
         $query = $qb->getQuery();
         $resultCollection = $query->getResult();
 
